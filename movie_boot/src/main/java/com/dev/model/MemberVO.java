@@ -4,7 +4,7 @@ public class MemberVO {
 	private String id;
 	private String password;
 	private String phone_number;
-	private int number;
+	private int age;
 
 	public MemberVO() {
 	} // 디폴트 생성자
@@ -14,12 +14,12 @@ public class MemberVO {
 		this.id = id;
 		this.password = password;
 		this.phone_number = phone_number;
-		this.number = number;
+		this.age = age;
 	}
 
 	@Override
 	public String toString() {
-		return "MemberVO [id=" + id + ", password=" + password + ", phone_number=" + phone_number + ", number=" + number
+		return "MemberVO [id=" + id + ", password=" + password + ", phone_number=" + phone_number + ", age=" + age
 				+ "]";
 	}
 
@@ -47,12 +47,12 @@ public class MemberVO {
 		this.phone_number = phone_number;
 	}
 
-	public int getNumber() {
-		return number;
+	public int getAge() {
+		return age;
 	}
 
-	public void setNumber(int number) {
-		this.number = number;
+	public void setAge(int age) {
+		this.age = age;
 	}
 
 }
