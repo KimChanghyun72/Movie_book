@@ -1,3 +1,4 @@
+package com.dev.model;
 
 public class Movie_BookingVo {
 	private String ticket_num;

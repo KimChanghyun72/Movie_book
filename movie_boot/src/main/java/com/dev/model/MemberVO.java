@@ -1,3 +1,5 @@
+package com.dev.model;
+
 
 
 public class MemberVO {

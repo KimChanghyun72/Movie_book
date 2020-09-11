@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,10 +67,8 @@
 
 			<div>
 				<button type="reset">초기화</button>
-				<!-- <button type="button" onclick="inputCheck()">등록</button> -->
 				<button>등록</button>
 			</div>
-
 
 		</form>
 	</div>
