@@ -1,3 +1,4 @@
+package com.dev.model;
 
 public class TimeTableVO {
 	private String timetable_code;

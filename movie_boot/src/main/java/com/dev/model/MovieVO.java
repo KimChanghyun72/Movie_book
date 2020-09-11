@@ -1,4 +1,4 @@
-
+package com.dev.model;
 
 public class MovieVO {
 	private String movie_code;

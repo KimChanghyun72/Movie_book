@@ -1,4 +1,4 @@
-
+package com.dev.model;
 
 public class TheaterVO {
 	private String theater_code;
