@@ -26,7 +26,11 @@ public class FrontController extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		charset = config.getInitParameter("charset");
 		list = new HashMap<String, Controller>();
-		list.put("/memberInsert.do", new MemberInsertController());
+		list.put("/memberInsert.do", new MemberInsertController()); //등록처리
+		list.put("/memberInsertForm.do", new MemberInsertFormController());//회원가입 페이지로 가는
+		list.put("/login.do", new LoginController());
+		list.put("/loginForm.do", new LoginFormController());
+		list.put("/logout.do", new LogoutFormController());
 		/*
 		list.put("/memberSearch.do", new MemberSearchController());
 		list.put("/memberUpdate.do", new MemberUpdateController());
