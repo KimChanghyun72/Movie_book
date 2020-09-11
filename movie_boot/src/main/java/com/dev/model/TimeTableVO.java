@@ -4,20 +4,20 @@ public class TimeTableVO {
 	private String timetable_code;
 	private String theater_code;
 	private String movie_code;
-	private String start_tione;
+	private String start_time;
 	private String end_time;
 	private String screening_date;
 
 	public TimeTableVO() {
 	}
 
-	public TimeTableVO(String timetable_code, String theater_code, String movie_code, String start_tione,
+	public TimeTableVO(String timetable_code, String theater_code, String movie_code, String start_time,
 			String end_time, String screening_date) {
 		super();
 		this.timetable_code = timetable_code;
 		this.theater_code = theater_code;
 		this.movie_code = movie_code;
-		this.start_tione = start_tione;
+		this.start_time = start_time;
 		this.end_time = end_time;
 		this.screening_date = screening_date;
 	}
@@ -25,7 +25,7 @@ public class TimeTableVO {
 	@Override
 	public String toString() {
 		return "TimeTableVO [timetable_code=" + timetable_code + ", theater_code=" + theater_code + ", movie_code="
-				+ movie_code + ", start_tione=" + start_tione + ", end_time=" + end_time + ", screening_date="
+				+ movie_code + ", start_time=" + start_time + ", end_time=" + end_time + ", screening_date="
 				+ screening_date + "]";
 	}
 
@@ -53,12 +53,12 @@ public class TimeTableVO {
 		this.movie_code = movie_code;
 	}
 
-	public String getStart_tione() {
-		return start_tione;
+	public String getStart_time() {
+		return start_time;
 	}
 
-	public void setStart_tione(String start_tione) {
-		this.start_tione = start_tione;
+	public void setStart_time(String start_time) {
+		this.start_time = start_time;
 	}
 
 	public String getEnd_time() {
