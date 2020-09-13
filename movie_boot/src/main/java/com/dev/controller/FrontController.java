@@ -29,7 +29,7 @@ public class FrontController extends HttpServlet {
 		list.put("/memberInsert.do", new MemberInsertController());
 		list.put("/movieSelectAll.do", new MovieSelectController());
 		list.put("/theaterSelectAll.do", new TheaterSelectController());
-		list.put("/timetableSelectAll.do", new TimetableSelectController());
+		list.put("/movieSelectAll_sec.do", new MovieSelect_secController());
 		/*
 		list.put("/memberSearch.do", new MemberSearchController());
 		list.put("/memberUpdate.do", new MemberUpdateController());

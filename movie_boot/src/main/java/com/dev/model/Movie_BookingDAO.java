@@ -14,14 +14,38 @@ public class Movie_BookingDAO {
 	ResultSet rs = null;
 
 	//싱글톤
-	static Movie_BookingVo instance;
+	static Movie_BookingDAO instance;
 
-	public static Movie_BookingVo getInstance() {
+	public static Movie_BookingDAO getInstance() {
 		if (instance == null)
-			instance = new Movie_BookingVo();
+			instance = new Movie_BookingDAO();
 		return instance;
 	}
-
+	
+	public ArrayList<String> selectSeatNum(String timetable_code){
+		String seatNum = null;
+		ArrayList<String> list = new ArrayList<String>();
+		try {
+			conn = ConnectionManager.getConnnect();
+			String sql = "SELECT seat_code "
+					+ " FROM movie_booking "
+					+ " where timetable_code = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, timetable_code);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				seatNum = rs.getNString("seat_code");
+				list.add(seatNum);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			ConnectionManager.close(rs, pstmt, conn);
+		}
+		return list;
+	}
+	
 	public ArrayList<Movie_BookingVo> selectAll() {
 		Movie_BookingVo resultVo = null;
 		ArrayList<Movie_BookingVo> list = new ArrayList<Movie_BookingVo>();
