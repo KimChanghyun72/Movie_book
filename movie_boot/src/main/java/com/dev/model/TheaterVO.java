@@ -1,6 +1,5 @@
 package com.dev.model;
 
-
 public class TheaterVO {
 	private String theater_code;
 	private String screen_name;

@@ -10,7 +10,9 @@ public class Movie_BookingVo {
 
 	public Movie_BookingVo() {
 	}
-
+	public Movie_BookingVo(String ticket_num) {
+		this.ticket_num = ticket_num;
+	}
 	public Movie_BookingVo(String ticket_num, String timetable_code, String id, String seat_code, int ageComm_pct,
 			int final_price) {
 		super();

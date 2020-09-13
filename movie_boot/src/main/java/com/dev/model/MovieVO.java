@@ -1,6 +1,5 @@
 package com.dev.model;
 
-
 public class MovieVO {
 	private String movie_code;
 	private String movie_name;

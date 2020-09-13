@@ -26,11 +26,18 @@ public class FrontController extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		charset = config.getInitParameter("charset");
 		list = new HashMap<String, Controller>();
+<<<<<<< HEAD
 		list.put("/memberInsert.do", new MemberInsertController()); //등록처리
 		list.put("/memberInsertForm.do", new MemberInsertFormController());//회원가입 페이지로 가는
 		list.put("/login.do", new LoginController());
 		list.put("/loginForm.do", new LoginFormController());
 		list.put("/logout.do", new LogoutFormController());
+=======
+		list.put("/memberInsert.do", new MemberInsertController());
+		list.put("/movieSelectAll.do", new MovieSelectController());
+		list.put("/theaterSelectAll.do", new TheaterSelectController());
+		list.put("/movieSelectAll_sec.do", new MovieSelect_secController());
+>>>>>>> branch 'master' of https://github.com/KimChanghyun72/Movie_book.git
 		/*
 		list.put("/memberSearch.do", new MemberSearchController());
 		list.put("/memberUpdate.do", new MemberUpdateController());
