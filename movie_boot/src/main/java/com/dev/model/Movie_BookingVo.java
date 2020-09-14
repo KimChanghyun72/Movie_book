@@ -5,7 +5,7 @@ public class Movie_BookingVo {
 	private String timetable_code;
 	private String id;
 	private String seat_code;
-	private int ageComm_pct;
+	private double ageComm_pct;
 	private int final_price;
 
 	public Movie_BookingVo() {
@@ -13,7 +13,7 @@ public class Movie_BookingVo {
 	public Movie_BookingVo(String ticket_num) {
 		this.ticket_num = ticket_num;
 	}
-	public Movie_BookingVo(String ticket_num, String timetable_code, String id, String seat_code, int ageComm_pct,
+	public Movie_BookingVo(String ticket_num, String timetable_code, String id, String seat_code, double ageComm_pct,
 			int final_price) {
 		super();
 		this.ticket_num = ticket_num;
@@ -62,11 +62,11 @@ public class Movie_BookingVo {
 		this.seat_code = seat_code;
 	}
 
-	public int getAgeComm_pct() {
+	public double getAgeComm_pct() {
 		return ageComm_pct;
 	}
 
-	public void setAgeComm_pct(int ageComm_pct) {
+	public void setAgeComm_pct(double ageComm_pct) {
 		this.ageComm_pct = ageComm_pct;
 	}
 

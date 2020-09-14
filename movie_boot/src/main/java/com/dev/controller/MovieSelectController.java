@@ -27,6 +27,8 @@ public class MovieSelectController implements Controller {
 		System.out.println(movieList);
 		System.out.println(theaterList);
 		
+		request.getSession().setAttribute("timetable_code", timetable_code);
+		request.getSession().setAttribute("movie_code", movie_code);
 		request.setAttribute("movieList", movieList);
 		request.setAttribute("theaterList", theaterList);
 		request.setAttribute("movie_choice", movie_code);
