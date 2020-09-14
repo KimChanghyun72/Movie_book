@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="euc-kr" ?>
 
 <decorators defaultdir="/decorator">
-<!-- 
+
 	<decorator name="user" page="layout.jsp">
 		<pattern>/*</pattern>
 	</decorator>
@@ -10,5 +10,5 @@
 		<pattern></pattern>
 		
 	</excludes>
-	 -->
+	
 </decorators>
