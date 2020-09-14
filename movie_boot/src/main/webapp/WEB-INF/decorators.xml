@@ -7,7 +7,7 @@
 	</decorator>
 
 	<excludes>
-		<pattern>index.html</pattern>
+		<pattern></pattern>
 		
 	</excludes>
 	

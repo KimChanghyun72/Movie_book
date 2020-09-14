@@ -12,7 +12,6 @@ import com.dev.model.MemberVO;
 
 public class LoginController implements Controller {
 
-	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		MemberVO memberVo = new MemberVO();
 		memberVo.setId(request.getParameter("id"));

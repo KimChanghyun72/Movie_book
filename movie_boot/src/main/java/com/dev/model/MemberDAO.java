@@ -103,11 +103,12 @@ public class MemberDAO {
 	public void update(MemberVO memberVO) {
 		try {
 			conn = ConnectionManager.getConnnect();
-			String sql = "UPDATE MEMBER SET PASSWORD = ? ,PHONE_NUMBER = ? WHERE ID= ?";
+			String sql = "UPDATE MEMBER SET PASSWORD = ? ,PHONE_NUMBER = ?, AGE = ? WHERE ID= ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, memberVO.getPassword());
 			pstmt.setString(2, memberVO.getPhone_number());
-			pstmt.setString(3, memberVO.getId());
+			pstmt.setInt(3, memberVO.getAge());
+			pstmt.setString(4, memberVO.getId());
 			int r = pstmt.executeUpdate();
 			System.out.println(r+"건이 수정됨.");
 		} catch (Exception e) {

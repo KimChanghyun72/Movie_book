@@ -29,8 +29,10 @@ $(function(){
 })
 
 </script>
+
 </head>
 <body>
+<decorator:title />
 <form id="frm1" name="frm1" action="movieSelectAll.do">
 	<select name="movie_choice">
 		<option value="m001">영화1
@@ -64,6 +66,7 @@ $(function(){
 	<button>submit</button>
 </form>
 <button id="cancel">취소</button>
-
+<decorator:footer />
 </body>
+
 </html>

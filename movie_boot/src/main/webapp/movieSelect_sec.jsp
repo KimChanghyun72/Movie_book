@@ -42,7 +42,7 @@ $(function(){
 	if($("#11").val()==seatNum){
 		$("#11").parent().html("매진");
 	} */
-})
+});
 </script>
 </body>
 </html>

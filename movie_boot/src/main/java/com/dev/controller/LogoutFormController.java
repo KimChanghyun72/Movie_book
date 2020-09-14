@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 
 public class LogoutFormController implements Controller {
 
-	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 	}

@@ -6,10 +6,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class LoginFormController implements Controller {
+public class MemberUpdateFormController implements Controller {
 
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/member/login.jsp").forward(request, response);
+		request.getRequestDispatcher("/member/memberUpdate.jsp").forward(request, response);
+
 	}
 
 }

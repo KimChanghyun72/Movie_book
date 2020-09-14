@@ -1,7 +1,8 @@
 package com.dev.model;
 
+import lombok.Getter;
 
-
+@Getter
 public class MemberVO {
 	private String id;
 	private String password;

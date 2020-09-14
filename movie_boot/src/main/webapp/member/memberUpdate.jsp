@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>memberUpdate.jsp</title>
+<title>회원정보수정</title>
 <script>
 	function inputCheck() {
 		//id, pw 필수입력 체크
@@ -15,117 +15,82 @@
 			frm.id.focus();
 			return false;
 		}
-		if (frm.pw.value == "") {
+		if (frm.password.value == "") {
 			alert("pw 입력");
-			frm.pw.focus();
-			return false;
-		}
-		//job(select tag)선택되었는지 확인.
-		//if(frm.job.selectedIndex > 0){
-		if (frm.job.value == "") {
-			alert("job 입력");
-			frm.job.focus();
+			frm.password.focus();
 			return false;
 		}
 
-		//radio, checkbox
-		var gender = document.querySelectorAll("[name='gender']:checked").length;
-		//name이 gender인 태그 중 checked되어있는 태그를 선택.
-		if (gender == 0) {
-			alert("성별 적어도 하나는 선택");
-			return false;
-		}
-		//회원가입폼 제출
-		//frm.submit();
 		return true;
 	}
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script>
-	$(function (){
-		//초기화
-		//성별
-		$("#frm [name=gender]").val(["${member.gender}"]);
-		//취미
-		//$("[name=hobby]").val("${member.hobby}".split("/")); //read,ski,sleep(,로 잘라서 배열에 넣어줘야함.)
-		$("[name=hobby]").val("${member.hobby}".replace("[", "").replace("]", "").split(", "));				
-		//mailyn
-		$("#frm [name=mailsend]").val(["${member.mailsend}"])
-		//job
-		$("#frm [name=job]").val(["${member.job}"])
-		
-	});
-</script>
+
+<link href="../css/register.css" rel="stylesheet">
 </head>
-<body>
-	<h3 class="page_title">회원수정</h3>
-	${error}
-	<form action="${pageContext.request.contextPath}/memberSearch.do">
-		<input type="hidden" name="job" value="update"> 
-		id : <input name="id">
-		<button>검색</button>
-	</form>
+<body style="padding-top: 70px;">
 
-	<c:if test="${not empty member}">
-		<h3>검색결과</h3>
-		<form method="post" name="frm" id="frm"
-			action="${pageContext.request.contextPath}/memberUpdate.do"
-			onsubmit="return inputCheck()">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-10 col-xl-9 mx-auto">
+				<div class="card card-signin flex-row my-5">
+					<div class="card-img-left d-none d-md-flex">
+						<!-- Background image for card set in CSS! -->
 
-			<h3 class="page_title">회원등록</h3>
-			<div>
-				<label for="id">id</label> <input type="text" name="id"
-					value="${member.id}" readonly="readonly">
+					</div>
+					<div class="card-body">
+						<h5 class="card-title text-center">회원 정보수정</h5>
+						<form class="form-signin" method="post" name="frm" id="frm"
+							action="${pageContext.request.contextPath}/memberUpdate.do"
+							onsubmit="return inputCheck()">
+							<div class="form-label-group">
+								<label for="inputUserame">아이디</label><br> <input
+									type="text" name="id" value=${id } readonly="readonly">
+							</div>
+
+							<div class="form-label-group">
+								<label for="inputPassword">패스워드</label><br> <input
+									type="password" id="password" class="form-control"
+									name="password" placeholder="Password" required>
+							</div>
+
+							<div class="form-label-group">
+								<label for="inputConfirmPassword">확인</label><br> <input
+									type="password" id="password" class="form-control"
+									name="password">
+
+							</div>
+							<div class="form-label-group">
+								<label for="inputPhone_number">핸드폰 번호</label><br> <input type="text"
+									id="phone_number" name="phone_number">
+
+								<div class="form-label-group">
+									<label for="inputAge">나이</label><br> <input type="text"
+										id="age" name="age">
+								</div>
+
+								<hr>
+								<div><a href="/member/memberDelete">회원탈퇴</a></div>
+								<button class="btn btn-lg btn-primary btn-block text-uppercase"
+									type="submit">수정</button>
+								<hr class="my-4">
+						</form>
+					</div>
+				</div>
 			</div>
-
-			<div>
-				<label for="pw">pwd</label> <input type="password" id="pw"
-					name="password" value="${member.password}">
-			</div>
-
-			<div>
-				<label>gender : </label> 
-				<label class="label2">남자</label> 
-				<input type="radio" name="gender" value="male"> <label
-					class="label2">여자</label> <input type="radio" name="gender"
-					value="female">
-			</div>
-
-			<div>
-				<label for="id">job : </label> <select name="job" id="job">
-					<option value="null" selected>선택</option>
-					<option value="programmer">prog</option>
-					<option value="account">account</option>
-					<option value="clerk">clerk</option>
-					<option value="president">president</option>
-				</select>
-			</div>
-
-			<div>
-				<label for="mailsend">메일 수신 여부 : </label> <input type="checkbox"
-					name="mailsend" value="accept"><br>
-			</div>
-			<div>
-				<label for="hobby">취미</label> 
-				<input type="checkbox" id="hobby" name="hobby" value="read">독서 
-				<input type="checkbox" name="hobby" value="game">게임 
-				<input type="checkbox" name="hobby" value="sleep">수면
-			</div>
-
-			<div>
-				<label for="reason">가입동기</label>
-				<textarea id="reason" name="reason" rows="5">${member.reason}</textarea>
-			</div>
-
-			<div>
-				<button type="reset">초기화</button>
-
-				<button>등록</button>
-			</div>
-
-
-		</form>
-	</c:if>
-
+		</div>
+	</div>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+	<!-- Third party plugin JS-->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+	<!-- Contact form JS-->
+	<script src="assets/mail/jqBootstrapValidation.js"></script>
+	<script src="assets/mail/contact_me.js"></script>
+	<!-- Core theme JS-->
+	<script src="js/scripts.js"></script>
 </body>
 </html>
