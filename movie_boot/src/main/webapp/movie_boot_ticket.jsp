@@ -69,7 +69,7 @@ div[name=screen] {
 			$(".ck").removeAttr("ckecked", true);
 		});
 	}
-		
+	<%-- 초기화가 안 됨 ㅠㅠㅠㅠ%>	
 </script>
 </head>
 <body>
