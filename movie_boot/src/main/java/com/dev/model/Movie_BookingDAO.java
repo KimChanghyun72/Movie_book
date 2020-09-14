@@ -152,7 +152,7 @@ public class Movie_BookingDAO {
 			pstmt.setString(2, movie_bookVo.getTimetable_code());
 			pstmt.setString(3, movie_bookVo.getId());
 			pstmt.setString(4, movie_bookVo.getSeat_code());
-			pstmt.setInt(5, movie_bookVo.getAgeComm_pct());
+			pstmt.setDouble(5, movie_bookVo.getAgeComm_pct());
 			pstmt.setInt(6, movie_bookVo.getFinal_price());
 			int r = pstmt.executeUpdate();
 			//3.결과 처리

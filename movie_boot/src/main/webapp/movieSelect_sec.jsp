@@ -7,26 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-<body>
-	<table border="1">
-		<%-- <c:forEach items="${seatNum}" var="list">
-	<c:if test="${seatNum==$('td').text()} "></c:if>
-	<tr>
-		<td>매진</td>
-	</tr>
-</c:forEach>
- --%>
-		<c:forEach var="i" begin="0" end="9">
-			<tr>
-				<c:forEach var="j" begin="0" end="9">
-					<td><button id="${i}${j}" value="${i}${j}">${i}${j}</button></td>
-				</c:forEach>
-			</tr>
-		</c:forEach>
-	</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
 $(function(){
 	<c:forEach items="${seatNum}" var="list">
@@ -42,7 +23,35 @@ $(function(){
 	if($("#11").val()==seatNum){
 		$("#11").parent().html("매진");
 	} */
+	$("button[name=seatVal]").on("click", function(){
+		$("input#seat_number").val($(this).val());
+	});
 });
 </script>
+
+</head>
+<body>
+	<table border="1">
+		<%-- <c:forEach items="${seatNum}" var="list">
+	<c:if test="${seatNum==$('td').text()} "></c:if>
+	<tr>
+		<td>매진</td>
+	</tr>
+</c:forEach>
+ --%>
+		<c:forEach var="i" begin="0" end="9">
+			<tr>
+				<c:forEach var="j" begin="0" end="9">
+					<td><button name="seatVal" id="${i}${j}" value="${i}${j}">${i}${j}</button></td>
+				</c:forEach>
+			</tr>
+		</c:forEach>
+	</table>
+	<form id="seat_choice" method="get" action="movieBookInsert.do">
+		<input id="seat_number" name="seat_number">
+		<button>결제</button>
+	</form>
+
+
 </body>
 </html>
