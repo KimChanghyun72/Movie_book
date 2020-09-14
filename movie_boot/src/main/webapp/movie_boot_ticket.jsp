@@ -64,6 +64,11 @@ div[name=screen] {
 			$(this).addClass("ck");
 		});	
 	}
+	function btnRset(){
+		$("#btnReset").click(function(){
+			$(".ck").removeAttr("ckecked", true);
+		});
+	}
 		
 </script>
 </head>
@@ -99,7 +104,7 @@ div[name=screen] {
 
 
 				<br>
-				<button>초기화</button>
+				<button id="btnReset">초기화</button>
 				<button>선택 완료</button>
 			</div>
 		</div>

@@ -16,12 +16,15 @@
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <!------ Include the above in your HEAD tag ---------->
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+<link href='http://fonts.googleapis.com/css?family=Buenard:700' rel='stylesheet' type='text/css'>
+<script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
 <style>
 .heading-box h2{ width:100%; color: red; }
 .text-box {
@@ -79,13 +82,7 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                
-                <h1 class="masthead-heading mb-0"> </h1>
-              <div class="container">
-	<div class="row heading-box">
-		
-	</div>
-</div>
+         
 <section>
     <div id="slider-animation" class="carousel slide" data-ride="carousel">
 
@@ -100,30 +97,33 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="./img/배너1.png" alt="Los Angeles">
+      <img src="./img/슬라이드1.jpg" alt="Los Angeles">
         <div class="text-box">
             <h2 class="wow slideInRight" data-wow-duration="2s"></h2>
             <p class="wow slideInLeft" data-wow-duration="2s"></p>
         </div>
     </div>
     <div class="carousel-item">
-      <img src="./img/배너2.png"alt="Chicago">
+      <img src="./img/슬라이드2.jpg"alt="Chicago">
     <div class="text-box">
             <h2 class="wow slideInUp" data-wow-duration="2s" ></h2>
             <p class="wow fadeInDown" data-wow-duration="2s"></p>
         </div>
     </div>
-    <div class="carousel-item">
-      <img src="./img/배너3.png" alt="New York">
+    <div class="carousel-item" >
+    <a href="http://caching2.lottecinema.co.kr/lotte_image/2020/Greenland/0914/Greenland_1280720.mp4">
+      <img src="./img/슬라이드3.jpg">
     <div class="text-box">
+    
             <h2 class="wow fadeInUp" data-wow-duration="2s"></h2>
             <p class="wow fadeInUp" data-wow-duration="2s"></p>
         </div>
+        </a>
     </div>
     <div class="carousel-item">
-      <img src="./img/배너4.png" alt="New York">
+      <img src="./img/슬라이드4.jpg" alt="New York">
     <div class="text-box">
-            <h2 class="wow fadeInUp" data-wow-duration="4s"></h2>
+            <h2 class="wow fadeInUp" data-wow-duration="2s"></h2>
             <p class="wow fadeInUp" data-wow-duration="2s"></p>
         </div>
     </div>
@@ -137,14 +137,11 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 
-</div>
-    
+</div> 
 </section>  
      </div>           
-            
-            
-            
-        </header>
+   </header>
+   
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
@@ -157,43 +154,71 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
+                
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">
                     <!-- Portfolio Items-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-400 w-300">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div><img class="img-fluid" src="./img/기기괴괴.jpg">
-                            
-                            </div>
+                            </div><img class="img-fluid" src="./img/어트랙션.jpg" alt="어트랙션"/>
+                        </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-400 w-300">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="./img/기기괴괴.jpg">
+                            </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-400 w-300">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div><img class="img-fluid" src="./img/다만악에서구하소서.jpg" alt="다만 악에서 구하소서"/>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-400 w-300">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="./img/짱구.jpg" alt="짱구"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-400 w-300">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div><img class="img-fluid" src="./img/위플래쉬.jpg" alt="위플래쉬"/>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-400 w-300">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div><img class="img-fluid" src="./img/테넷.jpg" alt="테넷"/>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-400 w-300">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div><img class="img-fluid" src="./img/엉덩이탐정.jpg" alt="엉덩이 탐정"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal7">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-400 w-300">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="./img/오문희.jpg" alt="오문희"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal8">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-400 w-300">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="./img/담보.jpg" alt="담보"/>
                         </div>
                     </div>
                 </div>
@@ -201,6 +226,33 @@
         </section>
         <!-- Portfolio Modal-->
         <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal0Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">어트랙션</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/어트랙션.jpg" alt="어트랙션"/>
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">영화설명</p>
+                                    <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
@@ -219,7 +271,7 @@
                                     <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/기기괴괴.jpg" alt="기기괴괴 성형수"/>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">영화설명</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>창닫기</button>
+                                    <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
                                 </div>
                             </div>
                         </div>
@@ -227,7 +279,7 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal2Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
@@ -246,7 +298,7 @@
                                     <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/다만악에서구하소서.jpg" alt="다만 악에서 구하소서"/>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">영화설명</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>창 닫기</button>
+                                    <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
                                 </div>
                             </div>
                         </div>
@@ -254,7 +306,34 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal2Label" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal3Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">짱구는 못말려 극장판 [신혼여행 허리케인]</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/짱구.jpg" alt="짱구"/>
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">영화설명</p>
+                                    <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal4Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
@@ -273,7 +352,7 @@
                                     <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/위플래쉬.jpg" alt="위플래쉬"/>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">영화설명</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                    <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
                                 </div>
                             </div>
                         </div>
@@ -281,7 +360,7 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal3Label" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal5Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
@@ -300,7 +379,7 @@
                                     <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/테넷.jpg" alt="테넷"/>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">영화설명</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                   <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
                                 </div>
                             </div>
                         </div>
@@ -308,7 +387,7 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal4Label" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal6Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
@@ -327,7 +406,61 @@
                                     <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/엉덩이탐정.jpg" alt="엉덩이 탐정"/>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-5">영화설명</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                   <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal7Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">오! 문희</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/오문희.jpg" alt="오문희"/>
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">영화설명</p>
+                                   <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal8Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">담보</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/담보.jpg" alt="담보"/>
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">영화설명</p>
+                                   <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
                                 </div>
                             </div>
                         </div>
@@ -336,36 +469,7 @@
             </div>
         </div>
         
-        <section class="page-section" id="contact">
-            <div class="container">
-                <!-- Contact Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Contact Section Content-->
-                <div class="row justify-content-center">
-                    <div class="col-lg-4">
-                        <div class="d-flex flex-column align-items-center">
-                            <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
-                            <div class="text-muted">Phone</div>
-                            <div class="lead font-weight-bold">(053) 555-5555</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="d-flex flex-column align-items-center">
-                            <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
-                            <div class="text-muted">Email</div><a class="lead font-weight-bold" href="https://github.com/KimChanghyun72">https://github.com/KimChanghyun72</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         <footer class="footer text-center">
             <div class="container">
                 <div class="row">
@@ -376,11 +480,9 @@
                     </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="mb-4">AROUND THE WEB</h4><a class="btn btn-outline-light btn-social mx-1" 
-                        href="http://www.daeguoracle.com/"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/KimChanghyun72"><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/chaebiiin"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/KimChanghyun72"><i class="fab fa-fw fa-dribbble"></i></a>
+                        <h4 class="mb-4">AROUND THE WEB</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/KimChanghyun72"><i class="fa fa-male"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/chaebiiin"><i class="fa fa-paw"></i></a>
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
@@ -393,7 +495,7 @@
         </footer>
         <!-- Copyright Section-->
         <section class="copyright py-4 text-center text-white">
-            <div class="container"><small class="pre-wrap">Copyright ©https://github.com/KimChanghyun72 2020</small></div>
+            <div class="container"><small class="pre-wrap">Copyright ©KimChanghyun72 & Chaebiiin</small></div>
         </section>
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
         <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
