@@ -20,14 +20,22 @@ public class TheaterDAO {
 			return instance;
 		}
 		
-		public ArrayList<TheaterVO> selectAll(TheaterVO theaterVO) {
+		public ArrayList<TheaterVO> selectAll(String movie_code) {
 			TheaterVO resultVO = null;
 			ArrayList<TheaterVO> list = new ArrayList<TheaterVO>();
 			try {
 				conn = ConnectionManager.getConnnect();
 				String sql = "SELECT theater_code, screen_name, theater_name "
-						+ "FROM theater";
+						+ " FROM theater ";
+						if(movie_code!=null) {
+							sql += "where theater_code in "
+									+ " (select distinct theater_code from timetable where movie_code = ?)";
+						}
+				
 				pstmt = conn.prepareStatement(sql);
+				if(movie_code!=null) {
+					pstmt.setString(1, movie_code);
+				}
 				rs = pstmt.executeQuery();
 				while(rs.next()) {
 					resultVO = new TheaterVO();

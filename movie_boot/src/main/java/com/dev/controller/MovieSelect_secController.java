@@ -17,7 +17,7 @@ public class MovieSelect_secController implements Controller {
 		ArrayList<String> seatNum = Movie_BookingDAO.getInstance().selectSeatNum(timetable_code);
 		System.out.println(seatNum);
 		request.setAttribute("seatNum", seatNum);
-		request.getRequestDispatcher("movieSelect_sec.jsp").forward(request, response);
+		request.getRequestDispatcher("movie_boot_ticket.jsp").forward(request, response);
 	}
 
 }

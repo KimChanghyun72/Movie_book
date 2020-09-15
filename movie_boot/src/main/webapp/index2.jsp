@@ -34,22 +34,16 @@ $(function(){
 <body>
 <decorator:title />
 <form id="frm1" name="frm1" action="movieSelectAll.do">
-	<select name="movie_choice">
-		<option value="m001">영화1
-		<option value="m002">영화2
-		<option value="m003">영화3
-	</select>
-	
-	<%-- <c:if test="${not empty movieList}">
-		<select name="theater_choice">
+	<c:if test="${not empty movieList}">
+		<select name="movie_choice" size="10">
 			<c:forEach items="${movieList}" var="list">
 				<option value="${list.movie_code}">${list.movie_name}
 			</c:forEach>		
 		</select>
 	</c:if>
-	 --%>
+	
 	<c:if test="${not empty theaterList}">
-		<select name="theater_choice">
+		<select name="theater_choice" size="10">
 			<c:forEach items="${theaterList}" var="list">
 				<option value="${list.theater_code}">${list.theater_name}
 			</c:forEach>		
@@ -57,7 +51,7 @@ $(function(){
 	</c:if>
 	
 	<c:if test="${not empty timetableList}">
-		<select name="timetable_choice">
+		<select name="timetable_choice" size="11">
 			<c:forEach items="${timetableList}" var="list">
 				<option value="${list.timetable_code}">${list.start_time}
 			</c:forEach>		
@@ -65,7 +59,10 @@ $(function(){
 	</c:if>
 	<button>submit</button>
 </form>
-<button id="cancel">취소</button>
+<form action="movieSelectAll.do">
+	<input type="hidden" name="reset" value="reset">
+	<button id="cancel">취소</button>
+</form>
 <decorator:footer />
 </body>
 

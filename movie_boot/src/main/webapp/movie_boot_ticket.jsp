@@ -58,18 +58,52 @@ div[name=screen] {
 </style>
 <script>
 	$(window).on("load", ck);
-	function ck(){
-		$("[name='ck']").on("click", function(){
-			$("[name='ck']").removeClass("ck");
+	function ck() {
+		for (var i = 0; i < $("[name='ck']").length; i++) {
+			if ((i > 10) && (i % 11 != 0)) {
+				$("[name='ck']").eq(i).on("click", function() {
+					if ($(this).text() !== "X") {
+						$("#seat_number").attr("value", $(this).text());
+						$(this).addClass("ck");
+					};
+					for (var j = 0; j < $("[name='ck']").length; j++) {
+						if($("[name='ck']").eq(j).text()!=$("#seat_number").val()){
+							$("[name='ck']").eq(j).removeClass("ck");
+						}
+					}
+				});
+			}
+		
+			/* $("[name='ck']").on("click", function(){
+				$("[name='ck']").removeClass("ck");
+				$(this).addClass("ck");
+			}); */
+
+			//주석처리			
+			/*  if($(this).attr("class")=="ck" || $(this).text()=="X"){
+				$(this).removeClass("ck");
+			} else {
 			$(this).addClass("ck");
-		});	
+			} */
+
+		}
 	}
-	function btnRset(){
-		$(".btnReset").click(function(){
+	function btnRset() {
+		$(".btnReset").click(function() {
 			$("parent").removeAttr("checked", true);
 		});
 	}
+	//추가된부분
+	<c:forEach items="${seatNum}" var="list">
+	$(function() {
+		for (var i = 0; i < $("[name=ck]").length; i++) {
+			if ($("[name=ck]").eq(i).text() == "${list}") {
+				$("[name=ck]").eq(i).text("X");
+			}
+		}
 
+	})
+	</c:forEach>
 </script>
 </head>
 <body>
@@ -101,11 +135,13 @@ div[name=screen] {
 					</c:forEach>
 					<br>
 				</c:forTokens>
+				<form id="seatSel" action="movieBookInsert.do">
+					<input id="seat_number" name="seat_number">
+					<button>선택 완료</button>
+				</form>
 
-
-				<br>
-				<input type="reset"><button>초기화</button>
-				<button>선택 완료</button>
+				<br> <input type="reset">
+				<button class="btnReset">초기화</button>
 			</div>
 		</div>
 	</div>

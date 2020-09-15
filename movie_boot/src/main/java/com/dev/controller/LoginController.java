@@ -23,6 +23,7 @@ public class LoginController implements Controller {
 		String page = "";
 		if (resultVo == null) { // id 가 없음
 			request.setAttribute("errormsg", "해당 ID가 없습니다.");
+			request.setAttribute("errorcode", "1");
 			page = "member/login.jsp";
 		} else {
 			if(memberVo.getPassword().equals(resultVo.getPassword())) { //로그인 성공 시 세션에 어트리뷰트 속성저장?
@@ -31,6 +32,7 @@ public class LoginController implements Controller {
 				page = "index.jsp";
 			}else { //패스워드 불일치
 				request.setAttribute("errormsg", "Password가 잘 못 되었습니다.");
+				request.setAttribute("errorcode", "1");
 				page = "member/login.jsp";
 			}
 		}

@@ -1,6 +1,7 @@
 package com.dev.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -21,12 +22,16 @@ public class MovieSelectController implements Controller {
 		String movie_code = request.getParameter("movie_choice");
 		String theater_code = request.getParameter("theater_choice");
 		String timetable_code = request.getParameter("timetable_choice");
+		String reset = request.getParameter("reset");
+		String path;
 		System.out.println(movie_code + "," + theater_code);
-		List<MovieVO> movieList = MovieDAO.getInstance().selectAll(null);
-		List<TheaterVO> theaterList = TheaterDAO.getInstance().selectAll(null);
+		ArrayList<MovieVO> movieList = MovieDAO.getInstance().selectAll(null);
 		System.out.println(movieList);
-		System.out.println(theaterList);
 		
+			List<TheaterVO> theaterList = TheaterDAO.getInstance().selectAll(movie_code);
+			System.out.println(theaterList);
+
+			
 		request.getSession().setAttribute("timetable_code", timetable_code);
 		request.getSession().setAttribute("movie_code", movie_code);
 		request.setAttribute("movieList", movieList);
@@ -35,20 +40,25 @@ public class MovieSelectController implements Controller {
 		request.setAttribute("theater_choice", theater_code);
 		
 		if(movie_code != null && theater_code != null && timetable_code != null) {
-			request.getRequestDispatcher("movieSelectAll_sec.do").forward(request, response);
+			path="movieSelectAll_sec.do";
 			
 		} else if(movie_code != null && theater_code != null) {
 			
 			List<TimeTableVO> timetableList = TimeTableDAO.getInstance().selectAll(theater_code, movie_code);
 			request.setAttribute("timetableList", timetableList);
-			request.getRequestDispatcher("index2.jsp").forward(request, response);
+			
+			path="index2.jsp";
 			
 		}else {
-			
-			request.getRequestDispatcher("index2.jsp").forward(request, response);
+			path="index2.jsp";
 		}
-		
-		
+
+		if(reset=="reset") {
+			request.removeAttribute("timetableList");
+			request.removeAttribute("theaterList");
+		}
+				
+		request.getRequestDispatcher(path).forward(request, response);
 	}
 
 }
