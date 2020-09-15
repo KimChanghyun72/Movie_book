@@ -120,6 +120,24 @@ public class Movie_BookingDAO {
 			ConnectionManager.close(null, pstmt, conn);
 		}
 
+		
+	}//end of delete
+	
+	public void deleteId(Movie_BookingVo movie_bookVo) {
+		try {
+			conn = ConnectionManager.getConnnect();
+			String sql = "DELETE FROM movie_booking WHERE id =?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, movie_bookVo.getId());
+			int r = pstmt.executeUpdate();
+			System.out.println(r + "건이 삭제됨.");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ConnectionManager.close(null, pstmt, conn);
+		}
+
+		
 	}//end of delete
 
 	public void update(Movie_BookingVo movie_bookVo) {

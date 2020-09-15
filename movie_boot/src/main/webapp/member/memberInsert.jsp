@@ -68,11 +68,15 @@
                 <input type="password" id="password" class="form-control" name="password">
                
               </div>
+              
+				<div class="form-label-group">
+               <label for="inputPhone_number">핸드폰번호</label><br>
+                <input type="text" id="phone_number" name="phone_number">
 
+              </div>
               <div class="form-label-group">
                <label for="inputAge">나이</label><br>
                 <input type="text" id="age" name="age">
-
               </div>
               
               <hr>

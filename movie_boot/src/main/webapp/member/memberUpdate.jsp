@@ -45,7 +45,7 @@
 							onsubmit="return inputCheck()">
 							<div class="form-label-group">
 								<label for="inputUserame">아이디</label><br> <input
-									type="text" name="id" value=${id } readonly="readonly">
+									type="text" name="id" value="${id}" readonly="readonly">
 							</div>
 
 							<div class="form-label-group">
@@ -62,15 +62,15 @@
 							</div>
 							<div class="form-label-group">
 								<label for="inputPhone_number">핸드폰 번호</label><br> <input type="text"
-									id="phone_number" name="phone_number">
+									id="phone_number" name="phone_number" value="${phone_number}">
 
 								<div class="form-label-group">
 									<label for="inputAge">나이</label><br> <input type="text"
-										id="age" name="age">
+										id="age" name="age" value="${age}">
 								</div>
 
 								<hr>
-								<div><a href="/member/memberDelete">회원탈퇴</a></div>
+								<div><a href="${pageContext.request.contextPath}/memberDelete.do">회원탈퇴</a></div>
 								<button class="btn btn-lg btn-primary btn-block text-uppercase"
 									type="submit">수정</button>
 								<hr class="my-4">
