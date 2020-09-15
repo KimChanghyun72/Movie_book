@@ -53,9 +53,9 @@
                 </div>
             </div>
         </nav><br><br><br>
-       
+       <div style="min-height: 800px;">
          <decorator:body/>
-       
+       </div>
  <footer class="footer text-center">
             <div class="container">
                 <div class="row">

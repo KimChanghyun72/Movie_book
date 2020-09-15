@@ -7,6 +7,8 @@
 <title>로그아웃</title>
 </head>
 <body>
-<div class="form-horizontal" action="${pageContext.request.contextPath}/logout.do" method="POST"></div>
+<%
+
+%>
 </body>
 </html>

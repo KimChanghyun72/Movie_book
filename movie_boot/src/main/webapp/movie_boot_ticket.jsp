@@ -65,11 +65,11 @@ div[name=screen] {
 		});	
 	}
 	function btnRset(){
-		$("#btnReset").click(function(){
-			$(".ck").removeAttr("ckecked", true);
+		$(".btnReset").click(function(){
+			$("parent").removeAttr("checked", true);
 		});
 	}
-	<%-- 초기화가 안 됨 ㅠㅠㅠㅠ%>	
+
 </script>
 </head>
 <body>
@@ -104,7 +104,7 @@ div[name=screen] {
 
 
 				<br>
-				<button id="btnReset">초기화</button>
+				<input type="reset"><button>초기화</button>
 				<button>선택 완료</button>
 			</div>
 		</div>
