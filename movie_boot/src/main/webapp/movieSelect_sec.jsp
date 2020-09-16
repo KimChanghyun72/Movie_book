@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
-$(function(){
+/*$(function(){
 	<c:forEach items="${seatNum}" var="list">
 	for(var i=0; i<10; i++){
 		for(var j=0; j<10; j++){
@@ -19,14 +19,14 @@ $(function(){
 		}
 	} 
 	</c:forEach>
-	/* var seatNum = "${fn:replace(fn:replace(seatNum,'[',''),']','')}";
+	 var seatNum = "${fn:replace(fn:replace(seatNum,'[',''),']','')}";
 	if($("#11").val()==seatNum){
 		$("#11").parent().html("매진");
-	} */
+	} 
 	$("button[name=seatVal]").on("click", function(){
 		$("input#seat_number").val($(this).val());
 	});
-});
+});*/
 </script>
 
 </head>

@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="euc-kr" ?>
 
 <decorators defaultdir="/decorator">
-<!-- 
+  
 	<decorator name="user" page="layout.jsp">
 		<pattern>/*</pattern>
 	</decorator>
 
 	<excludes>
-		<pattern></pattern>
+		<pattern>/Contoroller/theaterSelectAll.do</pattern>
+		<pattern>/Controller/movieSelectAll.do</pattern>
+		<pattern>/Controller/movieSelectAll_sec.do</pattern>
+				<pattern>/Controller//movieBookInsert.do</pattern>
+				<pattern>/Controller/movieSelectAll_pre.do</pattern>
 		
 	</excludes>
-	 -->
+
 </decorators>

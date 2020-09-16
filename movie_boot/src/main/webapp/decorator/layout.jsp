@@ -22,6 +22,7 @@
         <!-- Fonts CSS-->
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/heading.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/body.css">
+        <decorator:head />
     </head>
 <body>
 
@@ -32,7 +33,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">영화</a>
                         </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">예매</a>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="movieSelectAll_pre.do">예매</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">예매확인</a>
                         </li>
@@ -43,7 +44,7 @@
                            </li>
                            </c:if>
                            <c:if test="${not empty id}">
-                           <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="logoutForm.do">로그아웃</a>
+                           <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="logout.do">로그아웃</a>
                            </li>
                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="memberUpdateForm.do">개인정보수정</a>
                            </li>
@@ -53,7 +54,7 @@
                 </div>
             </div>
         </nav><br><br><br>
-       <div style="min-height: 800px;">
+       <div style="min-height: 800px; margin-top: 100px;">
          <decorator:body/>
        </div>
  <footer class="footer text-center">

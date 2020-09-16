@@ -9,15 +9,22 @@
 <meta charset="UTF-8">
 <title>좌석표</title>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style type="text/css">
 .json_a {
 	height: 100%;
 	margin-top: auto;
 	text-align: center;
 	font-weight: 600;
-	border: 1px solid black;
-	width: 700px;
-	height: 550px;
+	border: 1px solid darkblue;
+	width: 1200px;
+	height: 600px;
 }
 
 .json_a:befor {
@@ -27,10 +34,6 @@
 	height: 100%;
 	margin-right: 0;
 	vertical-align: middle;
-}
-
-.json_b {
-	display: inline-block vertical-align: middle;
 }
 
 .ck {
@@ -57,23 +60,31 @@ div[name=screen] {
 }
 </style>
 <script>
-	$(window).on("load", ck);
+
 	function ck() {
 		for (var i = 0; i < $("[name='ck']").length; i++) {
 			if ((i > 10) && (i % 11 != 0)) {
-				$("[name='ck']").eq(i).on("click", function() {
-					if ($(this).text() !== "X") {
-						$("#seat_number").attr("value", $(this).text());
-						$(this).addClass("ck");
-					};
-					for (var j = 0; j < $("[name='ck']").length; j++) {
-						if($("[name='ck']").eq(j).text()!=$("#seat_number").val()){
-							$("[name='ck']").eq(j).removeClass("ck");
-						}
-					}
-				});
+				$("[name='ck']")
+						.eq(i)
+						.on(
+								"click",
+								function() {
+									if ($(this).text() !== "X") {
+										$("#seat_number").attr("value",
+												$(this).text());
+										$(this).addClass("ck");
+									}
+									;
+									for (var j = 0; j < $("[name='ck']").length; j++) {
+										if ($("[name='ck']").eq(j).text() != $(
+												"#seat_number").val()) {
+											$("[name='ck']").eq(j).removeClass(
+													"ck");
+										}
+									}
+								});
 			}
-		
+
 			/* $("[name='ck']").on("click", function(){
 				$("[name='ck']").removeClass("ck");
 				$(this).addClass("ck");
@@ -87,8 +98,17 @@ div[name=screen] {
 			} */
 
 		}
+
 	}
-	function btnRset() {
+	$(function(){
+		 $("#btnOk").on("click" , function(){
+			 $("#seat_number1").val($("#seat_number").val())
+		 });
+		 
+		 ck();
+	 });
+	 
+	function btnReset() {
 		$(".btnReset").click(function() {
 			$("parent").removeAttr("checked", true);
 		});
@@ -109,39 +129,79 @@ div[name=screen] {
 <body>
 
 	<div class="json_a">
-		<div name="screen">Screen</div>
-		<div class="json_b">
-			<div>
-				<c:forEach var="i" begin="0" end="10" varStatus="s">
-					<c:if test="${s.index == 0 }">
-						<label name="ck" for="text${i}" style="visibility: hidden;">${i}</label>
-					</c:if>
-					<c:if test="${s.index > 0 }">
-						<label name="ck" for="text${i}">${i}</label>
-					</c:if>
-				</c:forEach>
-			</div>
-			<div class="json_c">
-				<c:forTokens items="A|B|C|D|E|F|G|H|I|J" delims="|" var="ch">
+		<div class="row">
+			<div name="screen">Screen</div>
 
-					<input type="text" id="button${ch}${i}" style='display: none;'>
-					<label name="ck" for="button${ch}${i}">${ch}${i}</label>
-
-
-
-					<c:forEach var="j" begin="1" end="10">
-						<input type="checkbox" id="button${ch}${j}" style="display: none;">
-						<label name="ck" for="button${ch}${j}">${ch}${j}</label>
+			<div class="col-7">
+				<div>
+					<c:forEach var="i" begin="0" end="10" varStatus="s">
+						<c:if test="${s.index == 0 }">
+							<label name="ck" for="text${i}" style="visibility: hidden;">${i}</label>
+						</c:if>
+						<c:if test="${s.index > 0 }">
+							<label name="ck" for="text${i}">${i}</label>
+						</c:if>
 					</c:forEach>
-					<br>
-				</c:forTokens>
-				<form id="seatSel" action="movieBookInsert.do">
-					<input id="seat_number" name="seat_number">
-					<button>선택 완료</button>
-				</form>
+				</div>
+				<div class="json_c">
+					<c:forTokens items="A|B|C|D|E|F|G|H|I|J" delims="|" var="ch">
 
-				<br> <input type="reset">
-				<button class="btnReset">초기화</button>
+						<input type="text" id="button${ch}${i}" style='display: none;'>
+						<label name="ck" for="button${ch}${i}">${ch}${i}</label>
+
+
+
+						<c:forEach var="j" begin="1" end="10">
+							<input type="checkbox" id="button${ch}${j}"
+								style="display: none;">
+							<label name="ck" for="button${ch}${j}">${ch}${j}</label>
+						</c:forEach>
+						<br>
+					</c:forTokens>
+
+
+					<input id="seat_number" name="seat_number">
+					<button type="button" id="btnOk">선택 완료</button>
+
+					<br> <input type="reset">
+
+				</div>
+			</div>
+			<div class="col-5" style="padding-right: 60px;">
+				<h2>예매 정보 확인</h2>
+
+				<p id="errornull" class="text-danger"></p>
+				<form class="mt-2" id="contactback" action="movieBookInsert.do">
+					<div class="form-group ">
+
+						<div class="form-group">
+							<input type="text" class="form-control" id="movie_code"
+								name="movie_code" value="${movie_code}" autocomplete="off" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="timetable_code"
+								name="timetable_code" value="${timetable_code}" autocomplete="off"
+								required>
+							<p id="errmail_box" class="text-danger"></p>
+						</div>
+						<div class="form-group">
+							<input type="numbers" class="form-control" id="seat_number1" name="seat_number" value="${param.seat_number}" autocomplete="off"
+								onkeyup="autoTab(this)" maxlength="12" required>
+							<p id="errnumonly" class="text-danger"></p>
+						</div>
+						<div class="form-group">
+							<input type="numbers" class="form-control" id="final_price"
+								name="final_price" value="${param.final_price}" autocomplete="off"
+								onkeyup="autoTab(this)" maxlength="12" required>
+							<p id="errnumonly" class="text-danger"></p>
+						</div>
+
+						<div class="form-group">
+							<button type="button" id="btnSendmail" name="button"
+								class="btn btn-warning text-white">예매확인</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
