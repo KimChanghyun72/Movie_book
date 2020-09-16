@@ -39,7 +39,6 @@ public class MovieDAO {
 				resultVO.setMovie_grade(rs.getString("movie_grade"));
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
 			ConnectionManager.close(rs, pstmt, conn);

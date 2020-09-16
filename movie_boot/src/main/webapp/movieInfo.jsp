@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>memberSearchOutput.jsp</title>
+<title>영화상세정보</title>
 </head>
 <body>
-ID : ${member.id}<br>
-JOB : ${member.job}<br>
-HOBBY : ${member.hobby}<br>
+
 </body>
 </html>

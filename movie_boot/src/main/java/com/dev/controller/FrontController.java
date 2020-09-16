@@ -34,6 +34,8 @@ public class FrontController extends HttpServlet {
 		list.put("/login.do", new LoginController());
 		list.put("/loginForm.do", new LoginFormController());
 		list.put("/logout.do", new LogoutController());
+		
+		
 		list.put("/movieSelectAll.do", new MovieSelectController());
 		list.put("/theaterSelectAll.do", new TheaterSelectController());
 		list.put("/movieSelectAll_sec.do", new MovieSelect_secController());

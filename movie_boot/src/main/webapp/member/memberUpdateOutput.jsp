@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>movieSelectOne</title>
+<title>memberInsertOutput.jsp</title>
 </head>
 <body>
-
+	<script>
+	window.alert("수정 되었습니다.");
+	
+	</script>
 </body>
 </html>
