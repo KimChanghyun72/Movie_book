@@ -36,12 +36,12 @@
 	vertical-align: middle;
 }
 
-.ck {
+input[type=radio]:checked +label {
 	background: #800080;
 	color: white;
 }
 
-label[name=ck] {
+.ck,input[type=radio] +label {
 	display: inline-block;
 	background: #fffffff;
 	border: 1px solid #000000;
@@ -62,6 +62,10 @@ div[name=screen] {
 <script>
 
 	function ck() {
+		$('.seats').on('click',function(){
+			$("#seat_number").val($(this).val());
+		});
+		/*
 		for (var i = 0; i < $("[name='ck']").length; i++) {
 			if ((i > 10) && (i % 11 != 0)) {
 				$("[name='ck']")
@@ -83,7 +87,7 @@ div[name=screen] {
 										}
 									}
 								});
-			}
+			}*/
 
 			/* $("[name='ck']").on("click", function(){
 				$("[name='ck']").removeClass("ck");
@@ -97,22 +101,30 @@ div[name=screen] {
 			$(this).addClass("ck");
 			} */
 
-		}
+		//}
 
 	}
 	$(function(){
 		 $("#btnOk").on("click" , function(){
 			 $("#seat_number1").val($("#seat_number").val())
 		 });
-		 
+
+			$(".btnReset").on("click", function() {
+				$(".seats").each(function(){
+					console.log($(this).prop("checked"));
+					$(this).prop("checked",false);
+				});
+				$("#seat_number").val('');
+				/*$("#seat_number").val("");
+				$("[name='ck']").each(function(){
+					$(this).removeClass('ck');
+				});*/
+			});
 		 ck();
 	 });
 	 
-	function btnReset() {
-		$(".btnReset").click(function() {
-			$("parent").removeAttr("checked", true);
-		});
-	}
+
+
 	//추가된부분
 	<c:forEach items="${seatNum}" var="list">
 	$(function() {
@@ -136,25 +148,24 @@ div[name=screen] {
 				<div>
 					<c:forEach var="i" begin="0" end="10" varStatus="s">
 						<c:if test="${s.index == 0 }">
-							<label name="ck" for="text${i}" style="visibility: hidden;">${i}</label>
+							<label class="ck" for="text${i}" style="visibility: hidden;">${i}</label>
 						</c:if>
 						<c:if test="${s.index > 0 }">
-							<label name="ck" for="text${i}">${i}</label>
+							<label class="ck" for="text${i}">${i}</label>
 						</c:if>
 					</c:forEach>
 				</div>
 				<div class="json_c">
 					<c:forTokens items="A|B|C|D|E|F|G|H|I|J" delims="|" var="ch">
 
-						<input type="text" id="button${ch}${i}" style='display: none;'>
-						<label name="ck" for="button${ch}${i}">${ch}${i}</label>
+						<input type="text" id="button${ch}${i}"  style='display: none;'>
+						<label class="ck" for="button${ch}${i}">${ch}${i}</label>
 
 
 
 						<c:forEach var="j" begin="1" end="10">
-							<input type="checkbox" id="button${ch}${j}"
-								style="display: none;">
-							<label name="ck" for="button${ch}${j}">${ch}${j}</label>
+							<input type="radio"  name='seats' class="seats" id="button${ch}${j}"  value="${ch}${j}" style="display: none;">
+							<label for="button${ch}${j}">${ch}${j}</label>
 						</c:forEach>
 						<br>
 					</c:forTokens>
@@ -163,7 +174,7 @@ div[name=screen] {
 					<input id="seat_number" name="seat_number">
 					<button type="button" id="btnOk">선택 완료</button>
 
-					<br> <input type="reset">
+					<input type="button" class="btnReset" value='초기화'>
 
 				</div>
 			</div>
