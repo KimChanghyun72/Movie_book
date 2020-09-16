@@ -51,8 +51,11 @@ public class Movie_BookingDAO {
 		ArrayList<Movie_BookingVo> list = new ArrayList<Movie_BookingVo>();
 		try {
 			conn = ConnectionManager.getConnnect();
-			String sql = "SELECT ticket_num, timetable_code, id, seat_code, ageComm_pct, final_price "
-					+ "FROM movie_booking";
+			String sql = "select a.ticket_num, a.seat_code, a.final_price, c.theater_name, d.movie_name " + 
+					"from movie_booking a, timetable b, theater c, movie d " + 
+					"where (a.timetable_code = b.timetable_code) " + 
+					"and (b.theater_code=c.theater_code) " + 
+					"and (b.movie_code=d.movie_code);";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {

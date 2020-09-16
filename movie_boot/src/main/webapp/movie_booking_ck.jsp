@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +26,18 @@
             
         </tr>
     </thead>
+    <tbody>
+    	<c:forEach items="${movieBookList}" var="list">
+    		<tr>
+    			<td>예매번호 : ${list.ticket_num}</td>
+    			<td>영화이름 : ${list.seat_code}</td>
+    			<td>상영관 : ${list.theater_name}</td>
+    			<td>좌석번호 : ${list.seat_code}</td>
+    			<td>가격 : ${list.final_price}</td>
+    			<td></td>
+    		</tr>
+    	</c:forEach>
+    </tbody>
             <tr>
                 <td></td>
                 <td></td>
