@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 				@WebInitParam(name = "charset", value="UTF-8")
 			})
 */
+
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -37,12 +38,12 @@ public class FrontController extends HttpServlet {
 		
 		
 		list.put("/movieSelectAll.do", new MovieSelectController());
-		list.put("/theaterSelectAll.do", new TheaterSelectController());
 		list.put("/movieSelectAll_sec.do", new MovieSelect_secController());
+		list.put("/theaterSelectAll.do", new TheaterSelectController());
 		list.put("/movieBookInsert.do", new MovieBookInsertController());
 		list.put("/movieSelectAll_pre.do", new MovieSelect_preController());
 		list.put("/movieBookingCk.do", new MovieBookingCkController());
-		
+		list.put("/movieInfo.do", new MovieInfoController());
 
 		
 	}
