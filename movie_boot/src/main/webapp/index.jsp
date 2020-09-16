@@ -25,6 +25,8 @@
 <!------ Include the above in your HEAD tag ---------->
 <link href='http://fonts.googleapis.com/css?family=Buenard:700' rel='stylesheet' type='text/css'>
 <script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
+
 <style>
 .heading-box h2{ width:100%; color: red; }
 .text-box {
@@ -97,16 +99,16 @@
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="./img/슬라이드1.jpg" alt="Los Angeles">
+      <img src="./img/슬라이드1.jpg" alt="슬라이드1">
         <div class="text-box">
-            <h2 class="wow slideInRight" data-wow-duration="2s"></h2>
+            <h2 class="wow slideInRight" data-wow-duration="1s"></h2>
             <p class="wow slideInLeft" data-wow-duration="2s"></p>
         </div>
     </div>
     <div class="carousel-item">
-      <img src="./img/슬라이드2.jpg"alt="Chicago">
+      <img src="./img/슬라이드2.jpg"alt="슬라이드2">
     <div class="text-box">
-            <h2 class="wow slideInUp" data-wow-duration="2s" ></h2>
+            <h2 class="wow slideInUp" data-wow-duration="1s" ></h2>
             <p class="wow fadeInDown" data-wow-duration="2s"></p>
         </div>
     </div>
@@ -115,13 +117,13 @@
       <img src="./img/슬라이드3.jpg">
     <div class="text-box">
     
-            <h2 class="wow fadeInUp" data-wow-duration="2s"></h2>
+            <h2 class="wow fadeInUp" data-wow-duration="1s"></h2>
             <p class="wow fadeInUp" data-wow-duration="2s"></p>
         </div>
         </a>
     </div>
     <div class="carousel-item">
-      <img src="./img/슬라이드4.jpg" alt="New York">
+      <img src="./img/슬라이드4.jpg" alt="슬라이드4">
     <div class="text-box">
             <h2 class="wow fadeInUp" data-wow-duration="2s"></h2>
             <p class="wow fadeInUp" data-wow-duration="2s"></p>
@@ -236,7 +238,6 @@
                     <div class="modal-body text-center">
                         <div class="container">
                             <div class="row justify-content-center">
-                                <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
                                     <h2 class="portfolio-modal-title text-secondary mb-0">어트랙션</h2>
                                     <!-- Icon Divider-->
@@ -245,12 +246,16 @@
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
+                                    <div class="row" style="width:800px;" >
+                                    <div class="col-8" style>
                                     <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/어트랙션.jpg" alt="어트랙션"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">영화설명</p>
-                                    <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
+                                    </div>
+                                    
                                 </div>
-                            </div>
+ </div>
+                    <hr><button class="btn btn-primary" href="${pageContext.request.contextPath}/index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
+
                         </div>
                     </div>
                 </div>
@@ -275,8 +280,8 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/기기괴괴.jpg" alt="기기괴괴 성형수"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">영화설명</p>
-                                    <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
+                                    
+                                   <hr> <button class="btn btn-primary" href="${pageContext.request.contextPath}/index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
                                 </div>
                             </div>
                         </div>
@@ -302,8 +307,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/다만악에서구하소서.jpg" alt="다만 악에서 구하소서"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">영화설명</p>
-                                    <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
+                                   <hr> <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
                                 </div>
                             </div>
                         </div>
@@ -329,8 +333,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/짱구.jpg" alt="짱구"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">영화설명</p>
-                                    <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
+                                    <hr><button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
                                 </div>
                             </div>
                         </div>
@@ -356,8 +359,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/위플래쉬.jpg" alt="위플래쉬"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">영화설명</p>
-                                    <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
+                                    <hr><button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
                                 </div>
                             </div>
                         </div>
@@ -383,8 +385,7 @@
                                     </div>
                                     <!-- Portfolio Modal - Image--><img class="portfolio-item-caption d-flex align-items-center justify-content-center h-500 w-400" src="./img/테넷.jpg" alt="테넷"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">영화설명</p>
-                                   <button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
+                                   <hr><button class="btn btn-primary" href="index2.jsp"><i class="fas fa-times fa-fw"></i>예매하기</button>
                                 </div>
                             </div>
                         </div>

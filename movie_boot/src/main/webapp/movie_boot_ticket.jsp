@@ -17,9 +17,11 @@
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style type="text/css">
+
 .json_a {
 	height: 100%;
 	margin-top: auto;
+	margin-left: 350px;
 	text-align: center;
 	font-weight: 600;
 	border: 1px solid darkblue;
@@ -178,7 +180,7 @@ div[name=screen] {
 
 				</div>
 			</div>
-			<div class="col-5" style="padding-right: 60px;">
+			<div class="col-3" style="padding-right: 60px;">
 				<h2>예매 정보 확인</h2>
 
 				<p id="errornull" class="text-danger"></p>
