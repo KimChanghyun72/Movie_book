@@ -122,7 +122,7 @@ div[name=screen] {
 			}
 		}
 
-	})
+	});
 	</c:forEach>
 </script>
 </head>
@@ -176,7 +176,7 @@ div[name=screen] {
 
 						<div class="form-group">
 							<input type="text" class="form-control" id="movie_code"
-								name="movie_code" value="${movie_code}" autocomplete="off" required>
+								name="movie_name" value="${movieInfo.movie_name}" autocomplete="off" required>
 						</div>
 						<div class="form-group">
 							<input type="text" class="form-control" id="timetable_code"
@@ -191,16 +191,16 @@ div[name=screen] {
 						</div>
 						<div class="form-group">
 							<input type="numbers" class="form-control" id="final_price"
-								name="final_price" value="${param.final_price}" autocomplete="off"
+								name="final_price" value="${movieInfo.movie_price*ageComm_pct/10}" autocomplete="off"
 								onkeyup="autoTab(this)" maxlength="12" required>
 							<p id="errnumonly" class="text-danger"></p>
 						</div>
 
 						<div class="form-group">
-							<button type="button" id="btnSendmail" name="button"
-								class="btn btn-warning text-white">예매확인</button>
 						</div>
 					</div>
+							<button type="submit" id="btnSendmail" name="button"
+								class="btn btn-warning text-white">예매확인</button>
 				</form>
 			</div>
 		</div>

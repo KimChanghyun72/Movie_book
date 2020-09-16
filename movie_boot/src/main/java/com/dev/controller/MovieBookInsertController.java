@@ -33,7 +33,9 @@ public class MovieBookInsertController implements Controller {
 		}else {
 			ageComm_pct=1.0;
 		}
-		int final_price=(int)(ageComm_pct*movieInfo.getMovie_price());
+		String final_price=request.getParameter("final_price");
+		final_price.replaceAll(".0", "");
+		int final_price2 = Integer.parseInt(final_price);
 		
 		//객체에 값들 담아줌.
 		movie_bookingVo.setTicket_num(ticket_num);
@@ -41,7 +43,7 @@ public class MovieBookInsertController implements Controller {
 		movie_bookingVo.setId(memberInfo.getId());
 		movie_bookingVo.setSeat_code(seat_code);
 		movie_bookingVo.setAgeComm_pct(ageComm_pct);
-		movie_bookingVo.setFinal_price(final_price);
+		movie_bookingVo.setFinal_price(final_price2);
 		
 		Movie_BookingDAO.getInstance().insert(movie_bookingVo);
 		

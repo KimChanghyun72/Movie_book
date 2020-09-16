@@ -27,37 +27,41 @@ public class MovieSelectController implements Controller {
 		System.out.println(movie_code + "," + theater_code);
 		ArrayList<MovieVO> movieList = MovieDAO.getInstance().selectAll(null);
 		System.out.println(movieList);
-		
-			List<TheaterVO> theaterList = TheaterDAO.getInstance().selectAll(movie_code);
-			System.out.println(theaterList);
 
-			
+		List<TheaterVO> theaterList = TheaterDAO.getInstance().selectAll(movie_code);
+		System.out.println(theaterList);
+		//선택한 영화에 대한 정보 선택.
+		MovieVO movieInfo = new MovieVO();
+		movieInfo.setMovie_code(movie_code);
+		
+		movieInfo = MovieDAO.getInstance().selectOne(movieInfo);
+
 		request.getSession().setAttribute("timetable_code", timetable_code);
-		request.getSession().setAttribute("movie_code", movie_code);
+		request.getSession().setAttribute("movieInfo", movieInfo);
 		request.setAttribute("movieList", movieList);
 		request.setAttribute("theaterList", theaterList);
 		request.setAttribute("movie_choice", movie_code);
 		request.setAttribute("theater_choice", theater_code);
-		
-		if(movie_code != null && theater_code != null && timetable_code != null) {
-			path="movieSelectAll_sec.do";
-			
-		} else if(movie_code != null && theater_code != null) {
-			
+
+		if (movie_code != null && theater_code != null && timetable_code != null) {
+			path = "movieSelectAll_sec.do";
+
+		} else if (movie_code != null && theater_code != null) {
+
 			List<TimeTableVO> timetableList = TimeTableDAO.getInstance().selectAll(theater_code, movie_code);
 			request.setAttribute("timetableList", timetableList);
-			
-			path="index2.jsp";
-			
-		}else {
-			path="index2.jsp";
+
+			path = "index2.jsp";
+
+		} else {
+			path = "index2.jsp";
 		}
 
-		if(reset=="reset") {
+		if (reset == "reset") {
 			request.removeAttribute("timetableList");
 			request.removeAttribute("theaterList");
 		}
-				
+
 		request.getRequestDispatcher(path).forward(request, response);
 	}
 
