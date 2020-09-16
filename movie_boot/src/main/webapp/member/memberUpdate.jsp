@@ -16,6 +16,7 @@
 			return false;
 		}
 		if (frm.password.value == "") {
+			alert(frm.password.value);
 			alert("pw 입력");
 			frm.password.focus();
 			return false;
@@ -56,8 +57,8 @@
 
 							<div class="form-label-group">
 								<label for="inputConfirmPassword">확인</label><br> <input
-									type="password" id="password" class="form-control"
-									name="password">
+									type="password" id="password_check" class="form-control"
+									name="password_check">
 
 							</div>
 							<div class="form-label-group">
