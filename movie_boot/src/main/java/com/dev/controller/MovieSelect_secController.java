@@ -23,6 +23,7 @@ public class MovieSelect_secController implements Controller {
 		}else {
 			ageComm_pct=10;
 		}
+		int movie_price = request.getSession().getAttribute(""movie_) 
 		
 		System.out.println(seatNum);
 		request.setAttribute("ageComm_pct", ageComm_pct);
