@@ -65,7 +65,7 @@
               
                <div class="form-label-group">
                 <label for="inputConfirmPassword">확인</label><br>
-                <input type="password" id="password" class="form-control" name="password">
+                <input type="password" id="passwordCk" class="form-control" name="passwordCk">
                
               </div>
               

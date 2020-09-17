@@ -9,6 +9,7 @@
 <body>
 	<script>
 	window.alert("등록이 완료 되었습니다.");
+	location.href="index.jsp"
 	
 	</script>
 </body>
