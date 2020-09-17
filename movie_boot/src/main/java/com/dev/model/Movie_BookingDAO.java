@@ -46,7 +46,7 @@ public class Movie_BookingDAO {
 		return list;
 	}
 	
-	public ArrayList<Movie_BookingVo> selectAll() {
+	public ArrayList<Movie_BookingVo> selectAll(String id) {
 		Movie_BookingVo resultVo = null;
 		ArrayList<Movie_BookingVo> list = new ArrayList<Movie_BookingVo>();
 		try {
@@ -55,7 +55,8 @@ public class Movie_BookingDAO {
 					"from movie_booking a, timetable b, theater c, movie d " + 
 					"where (a.timetable_code = b.timetable_code) " + 
 					"and (b.theater_code=c.theater_code) " + 
-					"and (b.movie_code=d.movie_code);";
+					"and (b.movie_code=d.movie_code)"
+					+ "and a.id=?";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {

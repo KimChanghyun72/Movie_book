@@ -130,12 +130,11 @@ div[name=screen] {
 	//추가된부분
 	<c:forEach items="${seatNum}" var="list">
 	$(function() {
-		for (var i = 0; i < $("[name=ck]").length; i++) {
-			if ($("[name=ck]").eq(i).text() == "${list}") {
-				$("[name=ck]").eq(i).text("X");
+		for (var i = 0; i < $(".ck2").length; i++) {
+			if ($(".ck2").eq(i).text() == "${list}") {
+				$(".ck2").eq(i).text("X");
 			}
 		}
-
 	});
 	</c:forEach>
 </script>
@@ -167,7 +166,7 @@ div[name=screen] {
 
 						<c:forEach var="j" begin="1" end="10">
 							<input type="radio"  name='seats' class="seats" id="button${ch}${j}"  value="${ch}${j}" style="display: none;">
-							<label for="button${ch}${j}">${ch}${j}</label>
+							<label class="ck2" for="button${ch}${j}">${ch}${j}</label>
 						</c:forEach>
 						<br>
 					</c:forTokens>
@@ -204,7 +203,7 @@ div[name=screen] {
 						</div>
 						<div class="form-group">
 							<input type="numbers" class="form-control" id="final_price"
-								name="final_price" value="${movieInfo.movie_price*ageComm_pct/10}" autocomplete="off"
+								name="final_price" value="${final_price}" autocomplete="off"
 								onkeyup="autoTab(this)" maxlength="12" required>
 							<p id="errnumonly" class="text-danger"></p>
 						</div>

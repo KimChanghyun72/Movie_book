@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dev.model.MemberVO;
+import com.dev.model.MovieVO;
 import com.dev.model.Movie_BookingDAO;
 
 public class MovieSelect_secController implements Controller {
@@ -15,7 +16,11 @@ public class MovieSelect_secController implements Controller {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String timetable_code = request.getParameter("timetable_choice");
 		int ageComm_pct=0;
+		String updTicket_num = request.getParameter("updInput");
 		
+		if(updTicket_num!=null || updTicket_num!="") {
+			
+		}
 		ArrayList<String> seatNum = Movie_BookingDAO.getInstance().selectSeatNum(timetable_code);
 		MemberVO memberInfo = (MemberVO) request.getSession().getAttribute("login");
 		if(memberInfo.getAge()<19) {
@@ -23,10 +28,13 @@ public class MovieSelect_secController implements Controller {
 		}else {
 			ageComm_pct=10;
 		}
-		int movie_price = request.getSession().getAttribute(""movie_) 
+		MovieVO movieInfo = (MovieVO) request.getSession().getAttribute("movieInfo");
+		
+		int movie_price = movieInfo.getMovie_price();
+		int final_price = (movie_price*ageComm_pct)/10;
 		
 		System.out.println(seatNum);
-		request.setAttribute("ageComm_pct", ageComm_pct);
+		request.setAttribute("final_price", final_price);
 		request.setAttribute("seatNum", seatNum);
 		request.getRequestDispatcher("movie_boot_ticket.jsp").forward(request, response);
 		

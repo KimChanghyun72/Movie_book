@@ -44,6 +44,8 @@ public class FrontController extends HttpServlet {
 		list.put("/movieSelectAll_pre.do", new MovieSelect_preController());
 		list.put("/movieBookingCk.do", new MovieBookingCkController());
 		list.put("/movieInfo.do", new MovieInfoController());
+		list.put("/movieBookingDelete.do", new MovieBookingDeleteController());
+		
 
 		
 	}
